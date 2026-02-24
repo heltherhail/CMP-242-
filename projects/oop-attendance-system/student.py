@@ -5,10 +5,8 @@ class Student:
         self.__attendance_count = 0
         self.__total_classes = 0
 
-    def mark_attendance(self, status):
-        self.__total_classes += 1
-        if status == 'present':
-            self.__attendance_count += 1 
+    def mark_attendance(self):
+        self.__attendance_count += 1 
 
     def add_class_day(self):
         self.__total_classes += 1
