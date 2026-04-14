@@ -1,9 +1,9 @@
 from logging import root
 
-from attendance_system import AttendanceSystem
+from attendance_system import Attendance
 from qr_manager import QRManager
 
-system = AttendanceSystem()
+system = Attendance()
 qr = QRManager()
 
 while True:
@@ -44,7 +44,7 @@ while True:
 import tkinter as tk
 from attendance_system import AttendanceSystem
 
-system = AttendanceSystem()
+system = Attendance()
 
 def add_Student():
         sid = entry_id.get()
