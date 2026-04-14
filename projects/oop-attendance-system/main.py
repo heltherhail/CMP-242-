@@ -1,3 +1,5 @@
+from logging import root
+
 from attendance_system import AttendanceSystem
 from qr_manager import QRManager
 
@@ -38,3 +40,28 @@ while True:
         break
     else:
         print("Invalid choice. Please try again.") 
+
+import tkinter as tk
+from attendance_system import AttendanceSystem
+
+system = AttendanceSystem()
+
+def add_Student():
+        sid = entry_id.get()
+        name = entry_name.get()
+        system.add_student(sid, name)
+
+root = tk.Tk()
+root.title("Attendance System")
+
+tk.Label(root, text="Student ID:").pack()
+entry_id = tk.Entry(root)
+entry_id.pack()
+
+tk.Label(root, text="Name:").pack()
+entry_name = tk.Entry(root)
+entry_name.pack()
+
+tk.Button(root, text="Add Student", command=add_student).pack()
+root.mainloop()
+   
